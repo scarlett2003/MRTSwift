@@ -10,6 +10,8 @@
 	<string>MRT</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>058190108ECB3824F7A9256BA1F37F312D07B3AD</key>
+		<string>https://github.com/scarlett2003/MRTSwift.git</string>
 		<key>E4472BE8038B5D2BF308DEBF13FE4DDD96A658CD</key>
 		<string>github.com:mobilegirls/MRT.git</string>
 	</dict>
@@ -17,15 +19,17 @@
 	<string>MRT.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>E4472BE8038B5D2BF308DEBF13FE4DDD96A658CD</key>
+		<key>058190108ECB3824F7A9256BA1F37F312D07B3AD</key>
 		<string>../..</string>
+		<key>E4472BE8038B5D2BF308DEBF13FE4DDD96A658CD</key>
+		<string>../../../MRT</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>github.com:mobilegirls/MRT.git</string>
+	<string>https://github.com/scarlett2003/MRTSwift.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>E4472BE8038B5D2BF308DEBF13FE4DDD96A658CD</string>
+	<string>058190108ECB3824F7A9256BA1F37F312D07B3AD</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -35,6 +39,14 @@
 			<string>E4472BE8038B5D2BF308DEBF13FE4DDD96A658CD</string>
 			<key>IDESourceControlWCCName</key>
 			<string>MRT</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>058190108ECB3824F7A9256BA1F37F312D07B3AD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MRTSwift</string>
 		</dict>
 	</array>
 </dict>
