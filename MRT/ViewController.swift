@@ -16,10 +16,10 @@ class ViewController: UIViewController, UITableViewDataSource {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
     // 每 60sec重新reload
-    NSTimer.scheduledTimerWithTimeInterval(60.0, target: self, selector: Selector("routineSyncDepartureTime"), userInfo: nil, repeats: true)
+    NSTimer.scheduledTimerWithTimeInterval(10.0, target: self, selector: Selector("routineSyncDepartureTime"), userInfo: nil, repeats: true)
     
     let background = UIImage(named: "bgkmrt.jpg")
-    self.view.backgroundColor = UIColor(patternImage: background)
+    self.view.backgroundColor = UIColor(patternImage: background!)
     
     //var station = DepartureManager.sharedInstance.stations[0]
     //var platform = station.redLine[0]
@@ -50,14 +50,20 @@ class ViewController: UIViewController, UITableViewDataSource {
                 }
                 println("==========")
             }
+            self.tableView.reloadData()
         }, errorBlock: nil)
     }
     
     
     // MARK: UITableViewDataSource
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //return DepartureManager.sharedInstance.stations.count
-        return 2  //呈現的行數.項
+        println("count = \(DepartureManager.sharedInstance.stations.count)")
+        return DepartureManager.sharedInstance.stations.count
+        //return 2  //呈現的行數.項
     }
     
 //    func stationData {
@@ -69,6 +75,10 @@ class ViewController: UIViewController, UITableViewDataSource {
     // 這行函數呈現的是，控制來源數據於每行呈現的樣子及效果
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCellWithIdentifier("station") as! UITableViewCell
+        
+        var station = DepartureManager.sharedInstance.stations[indexPath.row]
+        var label = cell.viewWithTag(101) as! UILabel
+        label.text = station.cname
     
         //var station = DepartureManager.sharedInstance.stations[0]
         //var platform = station.redLine[0]
