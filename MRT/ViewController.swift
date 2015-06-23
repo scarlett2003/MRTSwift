@@ -18,6 +18,9 @@ class ViewController: UIViewController, UITableViewDataSource {
     // 每 60sec重新reload
     NSTimer.scheduledTimerWithTimeInterval(60.0, target: self, selector: Selector("routineSyncDepartureTime"), userInfo: nil, repeats: true)
     
+    let background = UIImage(named: "bgkmrt.jpg")
+    self.view.backgroundColor = UIColor(patternImage: background)
+    
     //var station = DepartureManager.sharedInstance.stations[0]
     //var platform = station.redLine[0]
     //var time = platform.arrivalTime
@@ -57,23 +60,23 @@ class ViewController: UIViewController, UITableViewDataSource {
         return 2  //呈現的行數.項
     }
     
-    func stationData {
-        var station = DepartureManager.sharedInstance.stations[0]
-        var platform = station.redLine[0]
-        var time = platform.arrivalTime
-    }
+//    func stationData {
+//        var station = DepartureManager.sharedInstance.stations[0]
+//        var platform = station.redLine[0]
+//        var time = platform.arrivalTime
+//    }
 
     // 這行函數呈現的是，控制來源數據於每行呈現的樣子及效果
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCellWithIdentifier("station") as! UITableViewCell
-        
+    
         //var station = DepartureManager.sharedInstance.stations[0]
         //var platform = station.redLine[0]
         //var time = platform.arrivalTime
         
-        var stationTitle: UILabel = cell.viewWithTag(101) as! UILabel
-        stationTitle.text = "\(station)"
-        
+//        var stationTitle: UILabel = cell.viewWithTag(101) as! UILabel
+//        stationTitle.text = "\(station)"
+    
         
         
         return cell
